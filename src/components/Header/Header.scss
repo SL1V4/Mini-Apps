@@ -1,0 +1,10 @@
+header {
+  background: var(--dark-black);
+  padding: 10px 0;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
