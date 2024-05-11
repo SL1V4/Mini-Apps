@@ -1,6 +1,10 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import Intro from '@/components/Intro/Intro';
 
 export default function Home() {
-  return <main></main>;
+  return (
+    <main>
+      <Intro />
+    </main>
+  );
 }

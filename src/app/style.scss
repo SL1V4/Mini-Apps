@@ -8,13 +8,21 @@
   --white: #cacaca;
   --black: #2b2d31;
   --dark-black: #1e1f22;
+  --pink: #ba0395;
+  --yellow: #f1fe00;
   color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--ubuntu);
   background: var(--black);
   color: var(--white);
+
+  height: 3000px;
 }
 
 a {
