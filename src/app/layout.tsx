@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './style.scss';
 import { Ubuntu } from 'next/font/google';
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 import ReactDOM from 'react-dom/client';
 
 const ubuntu = Ubuntu({
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body className={ubuntu.variable}>
         <Header />
         {children}
-        <footer></footer>
+        <Footer />
       </body>
     </html>
   );
