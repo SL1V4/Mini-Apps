@@ -1,15 +1,14 @@
-import '@/components/Logo/Logo.scss';
-import logo from '@/components/Logo/img/logo.svg';
-import { dir } from 'console';
+import '@/components/Logo/Logo.scss'
+import LogoIcon from '@/icons/LogoIcon'
 
 const Logo = ({ url }: { url: string }) => {
-  return (
-    <a href={url} className="logo">
-      <img src={logo.src} alt="logo" />
+	return (
+		<a href={url} className="logo">
+			<LogoIcon />
 
-      <span>Simonenko Slava</span>
-    </a>
-  );
-};
+			<span>Simonenko Slava</span>
+		</a>
+	)
+}
 
-export default Logo;
+export default Logo
