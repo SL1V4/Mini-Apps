@@ -1,0 +1,68 @@
+.sidebar {
+	grid-area: left-sidebar;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	width: 100%;
+	min-width: 250px;
+	height: 100%;
+	padding: 10px;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 5px 15px;
+
+	& svg {
+		width: 20px;
+		height: 20px;
+		fill: var(--text-color);
+	}
+}
+
+.nav__item {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+
+	&:hover {
+		color: #fff;
+
+		& svg {
+			fill: #fff;
+		}
+	}
+
+	&.active {
+		color: #fff;
+
+		& svg {
+			fill: #fff;
+		}
+	}
+}
+
+.sidebar__social {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	background: #242424;
+	border-radius: 8px;
+	padding: 16px 20px;
+}
+
+.create__playlist_content {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.sidebar__social_title {
+	color: var(--white);
+	font-size: 14px;
+	font-weight: 700;
+}
