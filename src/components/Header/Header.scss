@@ -1,6 +1,13 @@
 header {
-  background: var(--dark-black);
+  position: absolute;
   padding: 10px 0;
+  top: 0;
+  height: 75px;
+  width: 100%;
+
+  background: var(--dark-black);
+  border-bottom: 1px solid var(--white);
+  z-index: 100;
 }
 
 .header__content {
