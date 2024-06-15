@@ -1,19 +1,23 @@
 'use client'
 
-import Player from '@/ut_components/Player/Player'
-import './style.scss'
+import { useQuery } from '@tanstack/react-query'
+import { PlaylistService } from '@/services/playlist/playlist.service'
+import PlaylistSection from '@/ut_components/PlaylistSection/PlaylistSection'
+import PlaylistSectionLoading from '@/ut_components/PlaylistSection/PlaylistSectionLoading'
 
 export default function Home() {
-	const song = {
-		name: 'Seiza ni naretara',
-		author: 'Kita Kita',
-		url: '/songs/song.ogg',
-		img: '/img/seiza.jpg'
-	}
+	const { data } = useQuery({
+		queryKey: ['main'],
+		queryFn: () => PlaylistService.getAll()
+	})
 
 	return (
-		<main>
-			<Player {...song} />
-		</main>
+		<>
+			{!data ? (
+				<PlaylistSectionLoading />
+			) : (
+				<PlaylistSection playlists={data} title="Something new" />
+			)}
+		</>
 	)
 }
