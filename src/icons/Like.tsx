@@ -1,10 +1,7 @@
+import { IIcon } from '@/types/icon.interface'
 import { FC, PropsWithChildren } from 'react'
 
-interface ILike {
-	fill?: string
-}
-
-const Like: FC<PropsWithChildren<ILike>> = ({ fill }) => {
+const LikeIcon: FC<PropsWithChildren<IIcon>> = ({ fill }) => {
 	return (
 		<svg
 			width="36"
@@ -22,4 +19,4 @@ const Like: FC<PropsWithChildren<ILike>> = ({ fill }) => {
 	)
 }
 
-export default Like
+export default LikeIcon
