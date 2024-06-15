@@ -5,7 +5,6 @@ export default function Terminal() {
   type TerminalState = {
     commandLineText: string;
     commandHint: JSX.Element | string;
-    completedCommandArr: string[];
   };
 
   const commandList: Record<string, () => Object> = {
@@ -51,7 +50,6 @@ export default function Terminal() {
   const [commandLineObject, setCommandLine] = useState<TerminalState>({
     commandLineText: 'help',
     commandHint: commandMessagess.default,
-    completedCommandArr: [],
   });
 
   function changeCommandLine(e: React.ChangeEvent<HTMLInputElement>) {
@@ -75,24 +73,11 @@ export default function Terminal() {
       const newTerminalObject = command();
 
       if (newTerminalObject) {
-        let commands = commandLineObject.completedCommandArr;
-
-        if (commands) {
-          commands.push(commandLineObject.commandLineText);
-        }
-
-        if (commands.length > 5) {
-          commandLineObject.completedCommandArr = commands.slice(
-            commands.length - 5,
-            commands.length
-          );
-        }
-
         setCommandLine((prev) => {
           return { ...prev, ...newTerminalObject };
         });
       }
-    } catch (err) {
+    } catch (err: unknown) {
       setCommandLine((prev) => ({
         ...prev,
         commandLineText: '',
