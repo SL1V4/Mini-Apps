@@ -1,0 +1,65 @@
+.profile {
+	display: flex;
+	align-items: flex-end;
+	gap: 25px;
+	padding: 10px 0;
+	user-select: none;
+}
+
+.profile__img {
+	position: relative;
+	cursor: pointer;
+
+	& img {
+		border-radius: 100%;
+		height: 232px;
+		width: 232px;
+		box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+		object-fit: cover;
+		background: var(--white);
+
+		transition: filter 0.3s ease;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		background: url('./img/edit.svg');
+		left: calc(50% - 24px);
+		top: calc(50% - 24px);
+		width: 48px;
+		height: 48px;
+		z-index: 10;
+		opacity: 0;
+
+		transition: opacity 0.3s ease;
+	}
+
+	&:hover {
+		&::after {
+			opacity: 1;
+		}
+
+		& img {
+			filter: brightness(0.6);
+		}
+	}
+}
+
+.profile__suptitle {
+	font-size: 1rem;
+}
+
+.profile__title {
+	width: 100%;
+	font-size: 7rem;
+	font-style: 900px;
+	line-height: normal;
+	color: var(--white);
+
+	cursor: pointer;
+}
+
+.profile__edit_form__input.file__input {
+	display: none;
+}

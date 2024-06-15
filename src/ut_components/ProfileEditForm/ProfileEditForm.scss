@@ -1,0 +1,117 @@
+.edit__popap_form {
+	display: flex;
+	align-items: flex-start;
+}
+
+.profile__edit_form__header {
+	margin-bottom: 15px;
+}
+
+.edit__popap_title {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--white);
+}
+
+.profile__edit_form__content {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.profile__edit_img__wrap {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+
+	&:hover {
+		& .profile__edit_img {
+			filter: brightness(0.6);
+		}
+
+		& .profile__edit_img__edit {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.profile__edit_img {
+	border-radius: 100%;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+	background: var(--pink);
+	transition: filter 0.3s ease;
+}
+
+.profile__edit_img__edit {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+
+	opacity: 0;
+	visibility: hidden;
+}
+
+.profile__edit_form__inputs {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 10px;
+}
+
+.profile__edit_form__input {
+	background: hsla(0, 0%, 100%, 0.1);
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 14px;
+	height: 40px;
+	padding: 0 12px;
+	width: 100%;
+
+	z-index: 10;
+}
+
+.profile__edit_form__submit {
+	font-size: 16px;
+	background: var(--pink);
+	padding: 10px 32px;
+	margin-top: 10px;
+	border-radius: 35px;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.profile__edit_img__button {
+	color: var(--white);
+	font-weight: 700;
+	font-size: 14px;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.pen__icon img {
+	width: 36px;
+	height: 36px;
+}
