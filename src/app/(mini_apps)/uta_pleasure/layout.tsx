@@ -26,7 +26,7 @@ export default function UtaPleasureAuthLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="ru">
+		<html lang="ru" className="ut__pleasure">
 			<body className={exo2.variable}>
 				<AppProvider>
 					<NextTopLoader
