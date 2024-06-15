@@ -1,0 +1,27 @@
+header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	min-height: 58px;
+	gap: 15px;
+	padding: 15px 20px;
+}
+
+.user {
+	display: flex;
+	background-color: var(--white);
+	border-radius: 100%;
+	border: 2px solid var(--white);
+
+	& img {
+		flex: 0 0 auto;
+		border-radius: 100%;
+		width: 24px;
+		height: 24px;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
