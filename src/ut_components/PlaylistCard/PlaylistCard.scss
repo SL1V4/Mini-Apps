@@ -1,0 +1,62 @@
+.playlist__card {
+	width: 280px;
+	padding: 12px;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 8px;
+	transition: background 0.2s ease;
+
+	&:hover {
+		background: var(--grey);
+
+		& .play__button {
+			opacity: 1;
+			visibility: visible;
+			bottom: 10px;
+		}
+	}
+
+	& .play__button {
+		position: absolute;
+		width: 46px;
+		height: 46px;
+		bottom: 5px;
+		right: 10px;
+
+		opacity: 0;
+		visibility: hidden;
+
+		transition: bottom 0.3s ease, opacity 0.3s ease;
+
+		z-index: 10;
+		background: var(--pink);
+
+		& img {
+			width: 18px;
+			height: 18px;
+		}
+	}
+}
+
+.playlist__card_img__wrap {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.playlist__card_img {
+	object-fit: cover;
+	width: 100%;
+	height: 256px;
+	border-radius: 8px;
+}
+
+.playlist__card_title {
+	font-size: 14px;
+	color: var(--white);
+}
+
+.playlist__card_content {
+	& a:hover {
+		text-decoration: underline;
+	}
+}
