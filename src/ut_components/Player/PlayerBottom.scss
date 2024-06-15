@@ -1,33 +1,30 @@
 .player {
-	width: 300px;
-	background: #e91a5b;
-	border-radius: 15px;
-	padding: 40px 20px;
+	grid-area: bottom-player;
 
-	box-shadow: 0 10px 30px #9c2a4e;
-}
-
-.player__top {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	position: relative;
+	justify-content: space-between;
+	width: 100%;
+	padding: 10px;
+	border-radius: 8px;
 
-	margin-bottom: 20px;
+	margin-top: auto;
+	user-select: none;
 }
 
-.player__top_back {
-	position: absolute;
-	left: 0;
-	top: calc(50% - 9px);
-	width: 18px;
-	height: 18px;
+.player__left,
+.player__right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
+	width: 30%;
+	min-width: 180px;
+}
+
+.player__right {
+	justify-content: end;
 }
 
 .player__song_title {
@@ -37,21 +34,12 @@
 }
 
 .player__img {
-	position: relative;
-	margin-bottom: 20px;
-
 	& img {
-		width: 100%;
-		height: 260px;
-		border-radius: 15px;
+		width: 56px;
+		height: 56px;
+		border-radius: 8px;
 
 		object-fit: cover;
-	}
-}
-
-.player__song_content {
-	& .player__song_title {
-		font-size: 20px;
 	}
 }
 
@@ -60,18 +48,9 @@
 	opacity: 0.9;
 }
 
-.player__song_content {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 20px;
-}
-
-.player__controls_like {
-	& svg {
-		width: 20px;
-		height: 20px;
-	}
+.player__controls_block {
+	width: 40%;
+	max-width: 700px;
 }
 
 .player__bar_block {
@@ -90,16 +69,17 @@
 }
 
 .player__bar {
-	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 	margin-bottom: 10px;
 }
 
 .player__bar_stripe {
 	appearance: none;
-	background: #999;
 	background: linear-gradient(
 		to right,
-		#fff var(--progress-bar-position),
+		var(--pink) var(--progress-bar-position),
 		#cdcdcd var(--progress-bar-position)
 	);
 	height: 4px;
@@ -131,6 +111,20 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	width: 170px;
+	margin: 0 auto 8px;
+
+	& img {
+		width: 12px;
+		height: 12px;
+		object-fit: contain;
+	}
+}
+
+.player__controls_button {
+	width: 12px;
+	height: 12px;
 }
 
 .player__controls_play {
@@ -138,7 +132,7 @@
 	justify-content: center;
 	align-items: center;
 	background: #fff;
-	width: 60px;
-	height: 60px;
+	width: 30px;
+	height: 30px;
 	border-radius: 100%;
 }
